@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Carlito';
+	src: url('../fonts/carlito.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/carlito.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/carlito.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/carlito.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/carlito.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/carlito.svg#carlito') format('svg'); /* Chrome < 4, Legacy iOS */
+}
