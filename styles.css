@@ -1,0 +1,25 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    width: 50vw;
+    height: 50vh;
+    background: red;
+    
+  
+}
+
+.logo {
+    display:flex;
+    align-items:flex-end;
+    text-align: center;
+    font-size: 30px;
+   justify-content: center;
+  
+}
