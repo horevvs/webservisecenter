@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "dejavusans";
+    src: url("fonts/dejavusans.woff2") format("woff2"),
+        url("fonts/dejavusans.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 
 
@@ -10,28 +19,50 @@ body {
 
 .container {
     width: 50vw;
-    height: 50vh;
-    background: red;
+    height: 80vh;
+    border: solid rebeccapurple 1px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     font-size: 30px;
-    justify-content: center;
+
 }
 
-.logo img{
-    width:50px;
+.logo img {
+    width: 50px;
     height: 50px;
 }
 
 .logo {
-    
     display: flex;
     align-items: center;
     font-size: 30px;
     justify-content: center;
-    font-size: 24px;
-    font-family: 'Comfortaa', cursive;
-   
+    font-size: 34px;
+    font-family: 'dejavusans';
+    margin-top: 50px;
+
+
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wscfooter {
+    display: flex;
+}
+
+input {
+    border-radius: 10px;
+}
+
+.containerText {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+
 }
