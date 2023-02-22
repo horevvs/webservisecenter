@@ -118,6 +118,7 @@ input {
     background-color: rgb(43, 81, 91);
     color: white;
     border-radius: 0.45rem;
+    cursor: pointer;
 }
 
 
@@ -141,8 +142,13 @@ a {
 }
 
 
+.example-content-main{
+    background-color: aqua;
+}
 
-@media (max-width: 547px)  and (min-width: 400px) 
+
+
+/* @media (max-width: 547px)  and (min-width: 400px) 
  {
    .text-field__input {
   width:350px;
@@ -154,4 +160,4 @@ a {
     .text-field__input {
    width:250px;
  }
-   } 
+   }  */
