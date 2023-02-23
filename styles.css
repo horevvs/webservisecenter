@@ -148,7 +148,7 @@ a {
 
 
 
-/* @media (max-width: 547px)  and (min-width: 400px) 
+@media (max-width: 547px)  and (min-width: 400px) 
  {
    .text-field__input {
   width:350px;
@@ -160,4 +160,4 @@ a {
     .text-field__input {
    width:250px;
  }
-   }  */
+   }  

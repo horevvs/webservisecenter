@@ -18,8 +18,35 @@ Vue.component('mainheader', {
 })
 
 
-Vue.component('menu', {
-   
+Vue.component('header_lower', {
+    props: ['images', 'icon'],
+    template: `
+    <div class="container-fluid  ">
+    <div class="row align-items-start  ">
+      <div class="col-6  col-sm-3 p-5 ">
+      <img v-bind:src="icon" alt="Прsимер">
+      </div>
+      <div class=" col-6 col-sm-3  pt-5 ">
+        <p class="fs-5"> Anna Gregoretti</p>
+        <p class="fs-6"> Tesla Croup Gmbh-Germany</p>
+      </div>
+      <div class=" col-sm-6  d-flex flex-row-reverse  justify-content-evenly">
+        <a href="#" class="block_size my-4 p-2 ">
+          <div>
+            <p class="block_up ">Resourses</p>
+            <p class="block_down"> You can consult and download documents shared with you </p>
+          </div>
+        </a>
+        <a href="#" class="block_size my-4 p-2  ">
+          <div>
+            <p class="block_up"> Support</p>
+            <p class="block_down"> Open a ticket or comunicate with our technical staff</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+   `
 })
 
 
@@ -31,7 +58,10 @@ new Vue({
     data: function () {
         return {
             images: "images/Vector.png",
+            icon: "images/Ellipse 1.jpg",
         }
     }
 
 });
+
+

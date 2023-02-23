@@ -22,6 +22,25 @@ button{
 .btn{
     margin-right: 15%;
 }
+.container-fluid{
+    background-color:rgb(43, 81, 91) ;
+    color: rgb(255, 255, 255);
+}
+
+.block_size{
+    max-width: 35%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0.45em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.block_up{
+    font-size: 24px;
+}
+
+.block_down{
+    font-size: 18px;
+}
 
 
 
