@@ -11,44 +11,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <title>Main title</title>
 </head>
 
 <body>
+
+
   <div id="app">
+
+     <!-- компонент в котором рендериться название дата и выпадающее меню -->
     <mainheader images='images/Vector.png'></mainheader>
+
+    <!-- компонент в котором рендериться ссылки, имя, а также иконка   -->
     <header_lower icon='images/Ellipse 1.jpg'></header_lower>
+
+     <!-- компонент в котором рендериться ссылки, имя,  и статистические данные  -->
+    <ticket :request="3" :inwork="5"  :waitingfor="3"> </ticket>
+
   </div>
-  <div class="row">
 
-    <div class="col-5  col-md-3 bg-primary  d-flex   flex-column  text-center  ">
-      <div class=" ticket mt-3">Ticket overview </div>
-      <img class=" ticket mt-3" src="images/circle.png" alt="dsd">
-    </div>
 
-    <div class="col-10 col-md-9 bg-warning ">
 
-      <div class="  d-flex">
-        <div> <img class="mt-4" src="images/Vector2.svg" alt="no image" alt=""> </div>
-        <div class=" total mt-4  ps-3 "> <span> 2022 Total request</span>
-          <p> Prors</p>
-        </div>
-      </div>
-
-      <hr class="w-25">
-      <div class="d-flex ticket">
-        <div> <input type="radio"> <span>in work</span>
-          <div class="px-3">Prors</div>
-        </div>
-        <div class="px-5"> <input class="radioBtn" type="radio"> <span>Waiting for your answer</span>
-          <div class="px-3">Prors</div>
-        </div>
-      </div>
-      <div class="ticket"> <input class="radioBtn" type="radio"> <span> Solved</span></div>
-    </div>
 </body>
 
 <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>

@@ -11,7 +11,7 @@ Vue.component('mainheader', {
         </div>
     </div>
     <div class="col-2  d-flex flex-row-reverse">
-         <button class="btn"> <a href="#"> <img v-bind:src="images" alt="Прsимер"> </a> </button>
+         <button class="btn"> <a href="#"> <img v-bind:src="images" alt="Пример"> </a> </button>
     </div>
     </div>
    `
@@ -50,119 +50,48 @@ Vue.component('header_lower', {
 })
 
 
-
+Vue.component('ticket', {
+    props: [ 'request', 'waitingfor','inwork'],
+    template: `
+    <div class="row justify-content-center">
+    <div class="col-6   col-md-2   d-flex   flex-column  text-center   ">
+      <div class=" ticket mt-3">Ticket overview </div>
+      <img class=" ticket mt-3" src="images/circle.png" alt="dsd">
+    </div>
+    <div class="col-12 col-md-10    ">
+      <div class="d-flex justify-content-center justify-content-md-start">
+        <div> <img class="mt-4" src="images/Vector2.svg" alt="no image" alt=""> </div>
+        <div class=" total mt-4  ps-3 "> <span> 2022 Total request</span>
+          <p> {{request}}</p>
+        </div>
+      </div>
+      <hr class="w-100">
+      <div class="d-flex ticket justify-content-center justify-content-md-start">
+        <div> <input type="radio"> <span>In work</span>
+          <div class="px-3">{{inwork}}</div>
+        </div>
+        <div class="px-4 ">
+          <input class="radioBtn " type="radio"> <span>Waiting for your answer</span>
+          <div class="px-3">{{ waitingfor}}</div>
+        </div>
+      </div>
+      <div class="d-flex ticket justify-content-center  justify-content-md-start mb-2 mt-2 ">
+        <input type="radio">
+        <div class="px-2"> Solved</div>
+      </div>
+    </div>
+  </div>
+   `
+})
 
 
 new Vue({
     el: "#app",
     data: function () {
         return {
-            images: "images/Vector.png",
-            icon: "images/Ellipse 1.jpg",
+            
         }
     }
 
 });
-
-
-// function createPie(container, chartData, config = {}) {
-//     const svgns = "http://www.w3.org/2000/svg";
-//     const offsetRatio = {
-//       top: 0.25,
-//       right: 0,
-//       left: 0.5,
-//       bottom: -0.25,
-//     }
-  
-//     const strokeWidth = config.strokeWidth || 5;
-//     const radiusValue = config.radius || 100;
-//     const radius = radiusValue - strokeWidth / 2;
-//     const fullSize = 2 * radiusValue;
-  
-//     // длина окружности 
-//     const length = 2 * Math.PI * radius; 
-  
-//     // смещение начальной точки
-//     let startPoint = config.start in offsetRatio ? config.start : 'top';
-//     const chartOffset = length * offsetRatio[startPoint];
-  
-//     // расчетные данные для построения секторов
-//     const sectors = [];
-//     chartData.forEach((sectorData, sectorIndex) => {
-//       // Длина сектора
-//       const width = length * sectorData.value / 100;
-//       // Смещение сектора от начальной точки
-//       let offset = chartOffset;
-  
-//       if (sectorIndex > 0) {
-//         let prevSector = sectors[sectorIndex - 1];
-//         offset = prevSector.offset - prevSector.width;
-//       }
-  
-//       sectors.push({
-//         ...sectorData,
-//         width,
-//         offset,
-//       })
-//     });
-  
-//     const svg = createSvgElement('svg', {
-//       'viewBox': `0 0 ${fullSize} ${fullSize}`,
-//       'fill': 'none',
-//       'width': fullSize,
-//       'height': fullSize,
-//     });
-  
-//     sectors.forEach(sector => {
-//       const circle = createSvgElement('circle', {
-//         cx: radius + strokeWidth / 2,
-//         cy: radius + strokeWidth / 2,
-//         r: radius,
-//         'stroke-dasharray': `${sector.width} ${length - sector.width}`,
-//         'stroke-dashoffset': sector.offset,
-//         'stroke': sector.color,
-//         'stroke-width': strokeWidth
-//       })
-  
-//       svg.appendChild(circle);
-//     })
-  
-//     container.appendChild(svg);
-  
-//     function createSvgElement(elementName, attrs = {}) {
-//       const el = document.createElementNS(svgns, elementName);
-//       Object.entries(attrs).forEach(([attrName, attrValue]) => {
-//         el.setAttributeNS(null, attrName, attrValue)
-//       });
-//       return el;
-//     }
-//   }
-  
-  
-//   // разделение на сектора (в процентах)
-//   const data = [
-//     {
-//       value: 30,
-//       color: 'red'
-//     },
-//     {
-//       value: 20,
-//       color: 'blue'
-//     },
-//     {
-//       value: 15,
-//       color: 'orange'
-//     },
-//     {
-//       value: 35,
-//       color: 'green'
-//     }
-//   ];
-  
-//   createPie(document.getElementById('app'), data, {
-//     strokeWidth: 20,
-//     radius: 100,
-//     start: 'top' // top|left|right|bottom
-//   });
-
 
