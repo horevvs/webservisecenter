@@ -12,7 +12,7 @@ Vue.component('mainheader', {
       </div>
   </div>
   <div class="col-2 pt-2 d-flex justify-content-end ">
-       <button class="btn"> <a href="#"> <img v-bind:src="images" alt="Пример"> </a> </button>
+       <button > <a href="#"> <img v-bind:src="images" alt="Пример"> </a> </button>
   </div>
   </div>
  `

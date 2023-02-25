@@ -17,7 +17,8 @@ button {
 }
 
 .btn {
-    margin-right: 15%;
+   background-color:rgb(43, 81, 91) ;
+   color: rgb(255, 255, 255);
 }
 
 .fluid {
