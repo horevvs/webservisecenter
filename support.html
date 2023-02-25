@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://bootstrap-4.ru/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles_support.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- компонент в котором рендериться название дата и выпадающее меню -->
+        <mainheader images='images/Vector.png'></mainheader>
+
+        <!-- компонент в котором рендериться ссылки, имя, а также иконка   -->
+        <!-- <support icon='images/support_icon.png'> </support> -->
+    </div>
+
+    <div>
+        <div class="fluid">
+            <div class="row ">
+                <div class="col-6 col-sm-3 p-5">
+                    <img v-bind:src="icon" alt="image not found">
+                </div>
+                <div class="col-6 col-sm-3 pt-5 d-flex  flex-column   ">
+                    <div class="fs-3"> Support</div>
+
+                </div>
+                <div class="col-sm-6 d-flex flex-row-reverse justify-content-around">
+                    <a href="#" class="block_size my-4 p-2">
+                        <div>
+                            <p class="block_up ">Resourses</p>
+                            <p class="block_down"> You can consult and download documents shared with you </p>
+                        </div>
+                    </a>
+                    <a href="main.html" class="block_size my-4 p-2">
+                        <div>
+                            <p class="block_up"> Home</p>
+                            <p class="block_down"> Returno to dashboard page</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <form>
+            <div class="form-row mt-3  d-flex flex-column  flex-md-row ">
+                <div class="col-12 col-md-9 px-4 ">
+                    <label for="inputEmail4">Ticket title</label>
+                    <input type="text" class="form-control inputs">
+                </div>
+                <div class="col-12 col-md-3 px-4">
+                    <label for="inputEmail4">Type</label>
+
+                    <select class="form-control  inputs">
+                        <option>Technical</option>
+                        <option>Commercial</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col px-4 mt-4 description" >
+
+                <label for="exampleFormControlTextarea1">Description</label>
+                <textarea class="form-control inputs" id="exampleFormControlTextarea1" rows="6"></textarea>
+
+              
+            </div>
+
+
+           
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- <div class="container-fluid back d-flex mt-2 ">
+
+        <div class="col-7 col-md-10 ">
+            <p class="color">Ticket title</p>
+            <input type="text" class="w-100  inputs">
+        </div>
+
+        <div class="col-5 col-md-2  ">
+            <p class="color">Type</p>
+
+            <select class="w-75 inputs">
+                <option>Technical</option>
+                <option>Commercial</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div class=" bg-primary">
+        <p class="color">Description</p>
+        <input type="text" class="inputs">
+    </div> -->
+
+</body>
+
+
+<script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>
+<script src="main.js"></script>
+
+</html>
