@@ -87,54 +87,66 @@ Vue.component('ticket', {
 
 
 Vue.component('support', {
-  props: ['images'],
+  props: ['icon'],
   template: `
   <div>
   <div class="fluid">
       <div class="row ">
-        <div class="col-6 col-sm-3 p-5">
-        <img v-bind:src="icon" alt="image not found">
-        </div>
-        <div class="col-6 col-sm-3 pt-5 d-flex  flex-column   ">
-          <div class="fs-3"> Support</div>
-         
-        </div>
-        <div class="col-sm-6 d-flex flex-row-reverse justify-content-around">
-          <a href="#" class="block_size my-4 p-2">
-            <div>
-              <p class="block_up ">Resourses</p>
-              <p class="block_down"> You can consult and download documents shared with you </p>
-            </div>
-          </a>
-          <a href="main.html" class="block_size my-4 p-2">
-            <div>
-              <p class="block_up"> Home</p>
-              <p class="block_down"> Returno to dashboard page</p>
-            </div>
-          </a>
-        </div>
+          <div class="col-6 col-sm-3 p-5">
+              <img v-bind:src="icon" alt="image not found">
+          </div>
+          <div class="col-6 col-sm-3 pt-5 d-flex  flex-column   ">
+              <div class="fs-3"> Support</div>
+
+          </div>
+          <div class="col-sm-6 d-flex flex-row-reverse justify-content-around">
+              <a href="#" class="block_size my-4 p-2">
+                  <div>
+                      <p class="block_up ">Resourses</p>
+                      <p class="block_down"> You can consult and download documents shared with you </p>
+                  </div>
+              </a>
+              <a href="main.html" class="block_size my-4 p-2">
+                  <div>
+                      <p class="block_up"> Home</p>
+                      <p class="block_down"> Returno to dashboard page</p>
+                  </div>
+              </a>
+          </div>
       </div>
-    </div>
+  </div>
 
   <form>
-      <div class="form-row d-flex mt-3">
-          <div class="  col-md-9 px-4 ">
+      <div class="form-row mt-3  d-flex flex-column  flex-md-row ">
+          <div class="col-12 col-md-9 px-4 ">
               <label for="inputEmail4">Ticket title</label>
               <input type="text" class="form-control inputs">
           </div>
-          <div class=" col-md-3 px-4">
+          <div class="col-12 col-md-3 px-4">
               <label for="inputEmail4">Type</label>
-              <input type="text" class="form-control inputs">
+
+              <select class="form-control  inputs">
+                  <option>Technical</option>
+                  <option>Commercial</option>
+              </select>
+          </div>
+      </div>
+
+      <div class="col px-4 mt-4 description">
+          <label >Description</label>
+          <textarea class="form-control inputs" id="exampleFormControlTextarea1" rows="6"></textarea>
+      </div>
+
+      <div class="form-row mt-3  d-flex flex-column  flex-md-row ">
+          <div class="col-12 col-md-9 px-4 mt-3 ">
+              <button class="form-control text-center text-md-start  btn">Select file</button>
           </div>
 
+          <div class="col-12 col-md-3 px-4 mt-3">
+              <button class="form-control btn "> Send</button>
+          </div>
       </div>
-      <div class="col px-4 mt-4" style="height: 200px"   >
-          <label for="inputEmail4">Description</label>
-          <input type="text" class="form-control inputs">
-      </div>
-
   </form>
-
 </div>
  `
 })
