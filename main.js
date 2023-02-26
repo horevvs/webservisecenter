@@ -6,7 +6,8 @@ Vue.component('mainheader', {
   data: function () {
     return {
       visible: false
-    }},
+    }
+  },
   template: `
   <div class="row">
       <div class="col-10">
@@ -21,19 +22,15 @@ Vue.component('mainheader', {
 
       <!-- в данной  верстке обображаеться фильтр которые открываеться при нажатии на кнопку-->
       <div v-if=visible class="container-fluid">
-      <div class="row">
-          <div class="col-2 bg-warning text-center">
-              Filters
+      <div class="row z-3 position-absolute px-4 mt-3">
+          <div class=" bg-warning text-center">
+              Filters header will be threre
           </div>
-         
+        </div>
       </div>
-  </div>
 
 
   </div>
-
-
-  
  `
 })
 
@@ -184,7 +181,7 @@ Vue.component('ticketlist', {
   <div class="row ">
     <div class="d-flex px-5 mt-4">
         <div class="col-10  ticketlist ">Ticket List</div>
-        <div class="col-2  text-end"> <button class=" bg-warning" v-on:click="visible=!visible"  >Show filters<></button> </div>
+        <div class="col-2  text-end"> <button class=" " v-on:click="visible=!visible"  >Show filters<></button> </div>
     </div>
     <div class="d-flex mt-3  flex-column flex-md-row text ">
         <div class="col-md px-5">
@@ -204,32 +201,40 @@ Vue.component('ticketlist', {
         </div>
     </div>
 
-   
-
-        <div v-if=visible class="container-fluid">
-        <div class="row">
-            <div class="col-2 bg-warning text-center">
+  
+    <div v-if=visible class="container-fluid filters  "  >
+        <div class="row mt-1 ">
+            <div class="col-1  text-center fs-3">
                 Filters
             </div>
-            <div class="col-9">
-                будет рендер
+            <div class="col-11">
+            <div class="row  justify-content-center ">
+            <div class="col-2 bg-warning   ">
+                <div> Тип</div>
+                <select class=" " name="" id="">
+                    <option value="">Куплено (ВТ)</option>
+                    <option value="">Продано (ВТ)</option>
+                    <option value="">Статус (ВТ)</option>
+                </select>
+            </div>
+
+            <div class="col-2  ">
+                <div> Диапазон дат</div>
+                <input type="date" id="start" name="trip-start" value="2018-07-22" value="2018-07-22" min="2018-01-01"
+                    max="2022-12-31">
+            </div>
+
+        </div>
             </div>
 
         </div>
     </div>
-
-    
- 
-
-   
 </div>`,
-
 })
+
 
 
 new Vue({
   el: "#app",
-
-
 });
 
