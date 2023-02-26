@@ -19,8 +19,8 @@ Vue.component('mainheader', {
 })
 
 Vue.component('header_lower', {
-    props: ['images', 'icon'],
-    template: `
+  props: ['images', 'icon'],
+  template: `
     <div class="fluid">
     <div class="row ">
       <div class="col-6 col-sm-3 p-5">
@@ -51,8 +51,8 @@ Vue.component('header_lower', {
 
 
 Vue.component('ticket', {
-    props: [ 'request', 'waitingfor','inwork'],
-    template: `
+  props: ['request', 'waitingfor', 'inwork'],
+  template: `
       <div class="row justify-content-center">
       <div class="col-6 col-md-2 d-flex flex-column  text-center">
         <div class=" ticket mt-3">Ticket overview </div>
@@ -139,7 +139,7 @@ Vue.component('support', {
 
       <div class="form-row mt-3  d-flex flex-column  flex-md-row ">
           <div class="col-12 col-md-9 px-4 mt-3 ">
-              <button class="form-control text-center text-md-start  btn">Select file</button>
+              <button class="form-control text-center text-md-start  btn px-3">Select file</button>
           </div>
 
           <div class="col-12 col-md-3 px-4 mt-3">
@@ -152,14 +152,65 @@ Vue.component('support', {
 })
 
 
+Vue.component('ticketlist', {
+  props: ['images'],
+  data: function () {
+    return {
+      visible: true
+    }
+  },
+
+
+  template: `
+  <div class="row ">
+    <div class="d-flex px-5 mt-4">
+        <div class="col-10  ticketlist ">Ticket List</div>
+        <div class="col-2  text-end"> <button class=" bg-warning" v-on:click="visible=!visible"  >Show filters<></button> </div>
+    </div>
+    <div class="d-flex mt-3  flex-column flex-md-row text ">
+        <div class="col-md px-5">
+            Status
+        </div>
+        <div class="col-md  px-5">
+            Creation date
+        </div>
+        <div class="col-md  px-5">
+            Last up-grade
+        </div>
+        <div class="col-md  px-5">
+            Ticket title
+        </div>
+        <div class="col-md  px-5">
+            Reference person
+        </div>
+    </div>
+
+   
+
+        <div v-if=visible class="container-fluid">
+        <div class="row">
+            <div class="col-2 bg-warning text-center">
+                Filters
+            </div>
+            <div class="col-9">
+                будет рендер
+            </div>
+
+        </div>
+    </div>
+
+    
+ 
+
+   
+</div>`,
+
+})
+
 
 new Vue({
-    el: "#app",
-    data: function () {
-        return {
-            
-        }
-    }
+  el: "#app",
+
 
 });
 
