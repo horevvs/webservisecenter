@@ -140,7 +140,6 @@ Vue.component('support', {
           </div>
           <div class="col-12 col-md-3 px-4">
               <label for="inputEmail4">Type</label>
-
               <select class="form-control  inputs">
                   <option>Technical</option>
                   <option>Commercial</option>
@@ -172,7 +171,7 @@ Vue.component('ticketlist', {
   props: ['images'],
   data: function () {
     return {
-      visible: true
+      visible: false
     }
   },
 
@@ -203,32 +202,32 @@ Vue.component('ticketlist', {
 
   
     <div v-if=visible class="container-fluid filters  "  >
-        <div class="row mt-1 ">
-            <div class="col-1  text-center fs-3">
-                Filters
-            </div>
-            <div class="col-11">
-            <div class="row  justify-content-center ">
-            <div class="col-2 bg-warning   ">
-                <div> Тип</div>
-                <select class=" " name="" id="">
-                    <option value="">Куплено (ВТ)</option>
-                    <option value="">Продано (ВТ)</option>
-                    <option value="">Статус (ВТ)</option>
-                </select>
-            </div>
-
-            <div class="col-2  ">
-                <div> Диапазон дат</div>
-                <input type="date" id="start" name="trip-start" value="2018-07-22" value="2018-07-22" min="2018-01-01"
-                    max="2022-12-31">
-            </div>
-
+    <div class="row mt-1 ">
+        <div class="col-1  text-center fs-3">
+            Filters
         </div>
-            </div>
-
+        <div class="col-11">
+        <div class="row justify-content-center p-3">
+        <div class="col-2 bg-secondary-subtle  px-5">
+            <div> Тип</div>
+            <select class=" fs-6 filters px-3" name="" id="">
+                <option value="">Куплено (ВТ)</option>
+                <option value="">Продано (ВТ)</option>
+                <option value="">Статус (ВТ)</option>
+            </select>
         </div>
+
+        <div class="col-2 bg-secondary-subtle ">
+            <div> Диапазон дат</div>
+            <input class=" filters" type="date" id="start" name="trip-start" value="2018-01-01"  min="2018-01-01"
+                max="2022-12-31">
+        </div>
+
     </div>
+        </div>
+
+    </div>
+</div>
 </div>`,
 })
 
