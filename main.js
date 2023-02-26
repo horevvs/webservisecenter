@@ -3,18 +3,37 @@
 
 Vue.component('mainheader', {
   props: ['images'],
+  data: function () {
+    return {
+      visible: false
+    }},
   template: `
   <div class="row">
-  <div class="col-10">
-      <div class="m-3">
-          <div class="text_header">Web Service Center</div>
-          <div class="text_header_data"> Sunday 25 September</div>
+      <div class="col-10">
+          <div class="m-3">
+              <div class="text_header">Web Service Center</div>
+              <div class="text_header_data"> Sunday 25 September</div>
+          </div>
+      </div>
+      <div class="col-2 pt-2 d-flex justify-content-end ">
+          <button v-on:click="visible=!visible" > <a href="#"> <img v-bind:src="images" alt="Пример"> </a> </button>
+      </div>
+
+      <!-- в данной  верстке обображаеться фильтр которые открываеться при нажатии на кнопку-->
+      <div v-if=visible class="container-fluid">
+      <div class="row">
+          <div class="col-2 bg-warning text-center">
+              Filters
+          </div>
+         
       </div>
   </div>
-  <div class="col-2 pt-2 d-flex justify-content-end ">
-       <button > <a href="#"> <img v-bind:src="images" alt="Пример"> </a> </button>
+
+
   </div>
-  </div>
+
+
+  
  `
 })
 
