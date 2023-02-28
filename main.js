@@ -182,23 +182,32 @@ Vue.component('ticketlist', {
         <div class="col-10  ticketlist ">Ticket List</div>
         <div class="col-2  text-end"> <button class=" " v-on:click="visible=!visible"  >Show filters<></button> </div>
     </div>
-    <div class="d-flex mt-3  flex-column flex-md-row text ">
-        <div class="col-md px-5">
-            Status
-        </div>
-        <div class="col-md  px-5">
-            Creation date
-        </div>
-        <div class="col-md  px-5">
-            Last up-grade
-        </div>
-        <div class="col-md  px-5">
-            Ticket title
-        </div>
-        <div class="col-md  px-5">
-            Reference person
-        </div>
-    </div>
+
+
+    <table class="table">
+    <thead class="text-center">
+        <tr class="px-3">    
+        <th scope="col"> Status</th>
+        <th scope="col"> Creation date</th>
+        <th scope="col"> Last up-grade</th>
+        <th scope="col"> Ticket title</th>
+        <th scope="col">  Reference person</th>
+      </tr>
+    </thead>
+
+    <tbody class="text-center">
+      <tr class="text-center">
+      <th scope="col"> 1</th>
+      <th scope="col"> 2</th>
+      <th scope="col"> 3 </th>
+      <th scope="col"> 4 </th>
+      <th scope="col"> 5 </th>
+      </tr>
+     
+    </tbody>
+  </table>
+
+
 
     <div v-if=visible class="container-fluid filters  ">
     <div class="row ">
@@ -238,3 +247,24 @@ new Vue({
   el: "#app",
 });
 
+
+
+
+
+{/* <div class="d-flex mt-3  flex-column flex-md-row text ">
+        <div class="col-md px-5">
+            Status
+        </div>
+        <div class="col-md  px-5">
+            Creation date
+        </div>
+        <div class="col-md  px-5">
+            Last up-grade
+        </div>
+        <div class="col-md  px-5">
+            Ticket title
+        </div>
+        <div class="col-md  px-5">
+            Reference person
+        </div>
+    </div> */}

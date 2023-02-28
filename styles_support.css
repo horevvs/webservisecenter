@@ -134,4 +134,8 @@ color:rgb(123, 124, 125) ;
         color: rgb(77, 77, 77);       
     }
 
+    .table_text{
+        font-size: 10px;
+    }
+
 }
