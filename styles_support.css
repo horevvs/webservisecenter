@@ -1,3 +1,10 @@
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
 .text_header {
     font-size: 34px;
     line-height: 30px;
@@ -16,9 +23,13 @@ button {
 
 }
 
+.tablexxx {
+    overflow-y: scroll
+}
+
 .btn {
-   background-color:rgb(43, 81, 91) ;
-   color: rgb(255, 255, 255);
+    background-color: rgb(43, 81, 91);
+    color: rgb(255, 255, 255);
 }
 
 .fluid {
@@ -26,9 +37,8 @@ button {
     color: rgb(255, 255, 255);
 }
 
-.back{
+.back {
     background-color: rgb(29, 165, 202);
-
 }
 
 .block_size {
@@ -37,10 +47,10 @@ button {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 0.45em;
     color: rgb(255, 255, 255);
-
 }
-.description{
-   height: 200px;
+
+.description {
+    height: 200px;
 }
 
 .block_up {
@@ -51,47 +61,51 @@ button {
     font-size: 18px;
 }
 
-.ticket{
+.ticket {
     font-family: 'Comfortaa', cursive;
     font-size: 25px;
     color: rgb(77, 77, 77);
 }
 
-a{text-decoration: none;}
-a:hover{
+a {
+    text-decoration: none;
+}
+
+a:hover {
     opacity: 0.5;
 }
 
-.total{
+.total {
     font-family: 'Comfortaa', cursive;
     font-size: 25px;
     color: rgb(77, 77, 77);
-    
+
 
 }
 
-.inputs{
-    background-color:rgb(252, 256, 246);  
+.inputs {
+    background-color: rgb(252, 256, 246);
 }
 
-label{
-    color: rgb(43, 81, 91); 
+label {
+    color: rgb(43, 81, 91);
     font-family: 'Comfortaa', cursive;
     font-size: 21px;
 }
 
-.ticketlist{
+.ticketlist {
     color: rgb(123, 124, 125);
-    font-size:25px; 
-    font-family: 'Comfortaa', cursive;;
+    font-size: 25px;
+    font-family: 'Comfortaa', cursive;
+    ;
 }
 
-.text{
-color:rgb(123, 124, 125) ;
+.text {
+    color: rgb(123, 124, 125);
 }
 
-.filters{
-  background-color: rgb(227, 219, 219);  
+.filters {
+    background-color: rgb(227, 219, 219);
 }
 
 
@@ -108,34 +122,34 @@ color:rgb(123, 124, 125) ;
 
 
 @media (max-width: 550px) {
-    .ticket{
+    .ticket {
         font-family: 'Comfortaa', cursive;
         font-size: 18px;
         color: rgb(77, 77, 77);
     }
 
-    .total{
+    .total {
         font-family: 'Comfortaa', cursive;
         font-size: 20px;
         color: rgb(77, 77, 77);
     }
 }
 
-@media (max-width:  375px) {
-    .ticket{
+@media (max-width: 375px) {
+    .ticket {
         font-family: 'Comfortaa', cursive;
         font-size: 15px;
         color: rgb(77, 77, 77);
     }
 
-    .total{
+    .total {
         font-family: 'Comfortaa', cursive;
         font-size: 15px;
-        color: rgb(77, 77, 77);       
+        color: rgb(77, 77, 77);
     }
 
-    .table_text{
-        font-size: 10px;
+    .table_text {
+        font-size: 15px;
     }
 
 }

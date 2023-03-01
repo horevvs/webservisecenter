@@ -177,7 +177,7 @@ Vue.component('ticketlist', {
 
 
   template: `
-  <div class="row ">
+  <div class="row">
     <div class="d-flex px-5 mt-4">
         <div class="col-10  ticketlist ">Ticket List</div>
         <div class="col-2  text-end"> <button class=" " v-on:click="visible=!visible"  >Show filters<></button> </div>
@@ -203,8 +203,19 @@ Vue.component('ticketlist', {
       <th scope="col"> 4 </th>
       <th scope="col"> 5 </th>
       </tr>
-     
     </tbody>
+    <tbody class="text-center">
+    <tr class="text-center">
+    <th scope="col"> 1</th>
+    <th scope="col"> 2</th>
+    <th scope="col"> 3 </th>
+    <th scope="col"> 4 </th>
+    <th scope="col"> 5 </th>
+    </tr>
+  </tbody>
+
+
+
   </table>
 
 
