@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://bootstrap-4.ru/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles_resourses.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Resourses</title>
+</head>
+
+<body>
+
+  <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router@3/dist/vue-router.js"></script>
+
+
+  <div id="app">
+    <mainheader images='images/Vector.png'></mainheader>
+
+    <resourses icon='images/logo_resourses.svg'> </resourses>
+  </div>
+
+
+
+  <div id="app2">
+    <div class="px-5 py-3">
+
+      <router-link class="fs-1 px-2" to="/foo">  Softwere</router-link>
+      <router-link class="fs-1 px-2" to="/bar">Documents</router-link>
+      <router-link class=" fs-1 px-2" to="/tor">Shared files</router-link>
+    </div>
+
+
+
+    <!-- отображаем тут компонент, для которого совпадает маршрут -->
+    <router-view></router-view>
+  </div>
+
+  <!-- <div id="app">
+
+    <mainheader images='images/Vector.png'></mainheader>
+
+    <resourses icon='images/logo_resourses.svg'> </resourses>
+  </div> -->
+
+
+
+
+</body>
+
+<script>
+
+
+  // 1. Определяем компоненты для маршрутов.
+  // Они могут быть импортированы из других файлов
+  const Foo = {
+    template: `
+    <div class="d-flex mt-3  flex-column flex-md-row text ">
+        <div class="col-md px-5">
+            Status
+        </div>
+        <div class="col-md  px-5">
+            Creation date
+        </div>
+        <div class="col-md  px-5">
+            Last up-grade
+        </div>
+        <div class="col-md  px-5">
+            Ticket title
+        </div>
+        <div class="col-md  px-5">
+            Reference person
+        </div>
+    </div>
+     `}
+
+
+
+
+
+  const Bar = {
+    template: `
+    <div class="d-flex mt-3  flex-column flex-md-row text ">
+        <div class="col-md px-5">
+            Status
+        </div>
+        <div class="col-md  px-5">
+            Creation date
+        </div>
+        
+        <div class="col-md  px-5">
+            Reference person
+        </div>
+    </div>
+     ` }
+  const Tor = { template: '<div>привет снова2</div>' }
+
+  // 2. Определяем несколько маршрутов
+  // Каждый маршрут должен указывать на компонент.
+  // "Компонентом" может быть как конструктор компонента, созданный
+  // через `Vue.extend()`, так и просто объект с опциями компонента.
+  // Мы поговорим о вложенных маршрутах позднее.
+  const routes = [
+    { path: '/foo', component: Foo },
+    { path: '/bar', component: Bar },
+    { path: '/tor', component: Tor }
+  ]
+
+  // 3. Создаём экземпляр маршрутизатора и передаём маршруты в опции `routes`
+  // Вы можете передавать и дополнительные опции, но пока не будем усложнять.
+  const router = new VueRouter({
+    routes // сокращённая запись для `routes: routes`
+  })
+
+  // 4. Создаём и монтируем корневой экземпляр приложения.
+  // Убедитесь, что передали экземпляр маршрутизатора в опции
+  // `router`, чтобы позволить приложению знать о его наличии.
+  const app = new Vue({
+    router
+  }).$mount('#app2')
+
+  // Всё, приложение работает! ;)
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>
+<script src="main.js"></script>
+
+
+</html>

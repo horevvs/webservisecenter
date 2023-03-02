@@ -16,7 +16,7 @@ Vue.component('mainheader', {
               <div class="text_header_data"> Sunday 25 September</div>
           </div>
       </div>
-      <div class="col-2 pt-2 d-flex justify-content-end ">
+      <div class="col-2 pt-2 d-flex justify-content-end  px-5">
           <button v-on:click="visible=!visible" > <a href="#"> <img v-bind:src="images" alt="Пример"> </a> </button>
       </div>
 
@@ -28,8 +28,6 @@ Vue.component('mainheader', {
           </div>
         </div>
       </div>
-
-
   </div>
  `
 })
@@ -49,7 +47,7 @@ Vue.component('header_lower', {
       <div class="col-sm-6 d-flex flex-row-reverse justify-content-around">
         <a href="#" class="block_size my-4 p-2">
           <div>
-            <p class="block_up ">Resourses</p>
+            <p class="block_up text-center">Resourses</p>
             <p class="block_down"> You can consult and download documents shared with you </p>
           </div>
         </a>
@@ -116,7 +114,7 @@ Vue.component('support', {
 
           </div>
           <div class="col-sm-6 d-flex flex-row-reverse justify-content-around">
-              <a href="#" class="block_size my-4 p-2">
+              <a href="resourses.html" class="block_size my-4 p-2">
                   <div>
                       <p class="block_up ">Resourses</p>
                       <p class="block_down"> You can consult and download documents shared with you </p>
@@ -165,6 +163,46 @@ Vue.component('support', {
 </div>
  `
 })
+
+
+Vue.component('resourses', {
+  props: ['icon'],
+  template: `
+  <div>
+  <div class="fluid">
+      <div class="row ">
+          <div class="col-6 col-sm-3 p-5">
+              <img v-bind:src="icon" alt="image not found">
+          </div>
+          <div class="col-6 col-sm-3 pt-5 d-flex  flex-column   ">
+              <div class="fs-3"> Resourses</div>
+
+          </div>
+          <div class="col-sm-6 d-flex flex-row-reverse justify-content-around">
+              <a href="support.html" class="block_size my-4 p-2">
+                  <div>
+                      <p class="block_up ">Support</p>
+                      <p class="block_down"> You can consult and download documents shared with you </p>
+                  </div>
+              </a>
+              <a href="main.html" class="block_size my-4 p-2">
+                  <div>
+                      <p class="block_up"> Home</p>
+                      <p class="block_down"> Returno to dashboard page</p>
+                  </div>
+              </a>
+          </div>
+      </div>
+  </div>
+
+ 
+</div>
+ `
+})
+
+
+
+
 
 
 Vue.component('ticketlist', {
