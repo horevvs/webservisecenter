@@ -16,7 +16,7 @@ Vue.component('mainheader', {
               <div class="text_header_data"> Sunday 25 September</div>
           </div>
       </div>
-      <div class="col-2 pt-2 d-flex justify-content-end  px-5">
+      <div class="col-2 pt-2 d-flex justify-content-end  px-2">
           <button v-on:click="visible=!visible" > <a href="#"> <img v-bind:src="images" alt="Пример"> </a> </button>
       </div>
 
@@ -299,21 +299,3 @@ new Vue({
 
 
 
-
-{/* <div class="d-flex mt-3  flex-column flex-md-row text ">
-        <div class="col-md px-5">
-            Status
-        </div>
-        <div class="col-md  px-5">
-            Creation date
-        </div>
-        <div class="col-md  px-5">
-            Last up-grade
-        </div>
-        <div class="col-md  px-5">
-            Ticket title
-        </div>
-        <div class="col-md  px-5">
-            Reference person
-        </div>
-    </div> */}

@@ -1,3 +1,32 @@
+@font-face {
+    font-family: "dejavusans";
+    src: url("fonts/dejavusans.woff2") format("woff2"),
+        url("fonts/dejavusans.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "franklingothbookctt";
+    src: url("fonts/franklingothbookctt.woff2") format("woff2"),
+        url("fonts/franklingothbookctt.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "carlito";
+    src: url("fonts/carlito.woff2") format("woff2"),
+        url("fonts/fcarlito.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 html,
 body {
     max-width: 100%;
@@ -79,8 +108,29 @@ a:hover {
     font-family: 'Comfortaa', cursive;
     font-size: 25px;
     color: rgb(77, 77, 77);
+}
 
 
+.login {
+    
+    font-size: 24px;
+    font-family: 'carlito';
+    background-color: rgb(43, 81, 91);
+    color: white;
+    border-radius: 0.45rem;
+    cursor: pointer;
+}
+
+.request {
+   
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'carlito';
+    border: solid rgb(43, 81, 91) 1px;
+    background-color: white;
+    color:  rgb(43, 81, 91);
+    border-radius: 0.45rem;
+    cursor: pointer;
 }
 
 .inputs {
@@ -108,8 +158,8 @@ label {
     background-color: rgb(227, 219, 219);
 }
 
-.routers:active{
-    background-color:rgb(43, 81, 91);
+.routers:active {
+    background-color: rgb(43, 81, 91);
     border-radius: 0.45em;
 }
 

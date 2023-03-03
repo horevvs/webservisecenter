@@ -54,7 +54,6 @@
 
   <div id="app">
     <mainheader images='images/Vector.png'></mainheader>
-
     <resourses icon='images/logo_resourses.svg'> </resourses>
   </div>
 
@@ -62,37 +61,69 @@
 
   <div id="app2">
     <div class="px-5 py-3 d-flex flex-column text-center flex-md-row">
-
-      <router-link class="fs-1 px-2" to="/foo">
-        <button v-bind:class="{active: isActive}" v-on:click="isActive=!isActive , isActive2=false, isActive3=false  "> Softwere
+      <router-link class="fs-2 px-2  font-weight-bold" to="/foo">
+        <button v-bind:class="{active: isActive}" class=" font-weight-bold"
+          v-on:click="isActive=!isActive , isActive2=false, isActive3=false  "> Softwere
         </button>
       </router-link>
-
-      <router-link class="fs-1 px-2" to="/bar">
+      <router-link class="fs-2 px-2" to="/bar">
         <button v-bind:class="{active2: isActive2}"
           v-on:click="isActive2=!isActive2, isActive=false,  isActive3=false  ">Documents</button>
       </router-link>
-
-
-      <router-link class=" fs-1 px-2" to="/tor">
+      <router-link class=" fs-2 px-2" to="/tor">
         <button v-bind:class="{active3:isActive3}"
-        v-on:click="isActive3=!isActive3, isActive2=false, isActive=false ">Shared filters</button>
-
-     
+          v-on:click="isActive3=!isActive3, isActive2=false, isActive=false ">Shared filters</button>
     </div>
-
 
     <!-- отображаем тут компонент, для которого совпадает маршрут -->
     <router-view></router-view>
-
   </div>
+  <!-- <div class="container-fluid">
 
-  <!-- <div id="app">
+    <div class="row d-flex flex-column flex-md-row ">
 
-    <mainheader images='images/Vector.png'></mainheader>
+      <div class="col-md d-flex  flex-column  ">
+        <div class="col-md fs-3 ">ADAM 1.8.1.7</div>
+        <div class=" fs-5  my-3"> The version that your company is currently using. If you need you could download it
+          there. To see your server data press the server button in the right cornet.</div>
+        <div class=" fs-3  my-3 text-success">Under maintenance: 10/01/23</div>
+        <div class=" my-2"><button class="login ">START LOADING</button></div>
+      </div>
 
-    <resourses icon='images/logo_resourses.svg'> </resourses>
+      <div class="col-md d-flex  flex-column ">
+        <div class="col-md fs-3 ">ADAM 2.0.1.4</div>
+        <div class=" fs-5  my-3 pb-5"> The latest version of the application contains new features and improvements of
+          the previous version</div>
+        <div class="col-md fs-5 "></div>
+        <div class="my-2"><button class="request">Request</button></div>
+      </div>
+    </div>
+
+    
+
+    <div class="row d-flex flex-column flex-md-row">
+
+      <div class="col-md d-flex  flex-column  ">
+        <div class="col-md fs-3 ">Polyga FLEXSCAN 1.13.67</div>
+       <div class=" fs-5  my-3"> The version that your company is currently using</div>
+        <div class=" fs-3  my-3 text-danger">Maintenance expired: 10/01/2021</div>
+        <div class=" my-2 "><button class="login ">START LOADING</button> <button class="request  ">Request
+            maintenance</button> </div>
+      </div>
+
+      <div class="col-md d-flex  flex-column ">
+        <div class="col-md fs-3 ">Polyga FLEXSCAN 1.62.7</div>
+        <div class=" fs-5  my-3 pb-5"> The latest version of the application contains new features and improvements of
+          the previous version</div>
+        <div class="col-md fs-5 "></div>
+        <div class="my-4"><button class="request">Request</button></div>
+      </div>
+    </div>
+
   </div> -->
+
+
+
 
 
 
@@ -101,32 +132,50 @@
 
 <script>
 
-
-  // 1. Определяем компоненты для маршрутов.
-  // Они могут быть импортированы из других файлов
   const Foo = {
     template: `
-    <div class="d-flex mt-3  flex-column flex-md-row text ">
-        <div class="col-md px-5">
-            Status
-        </div>
-        <div class="col-md  px-5">
-            Creation date
-        </div>
-        <div class="col-md  px-5">
-            Last up-grade
-        </div>
-        <div class="col-md  px-5">
-            Ticket title
-        </div>
-        <div class="col-md  px-5">
-            Reference person
-        </div>
-    </div>
+    <div class="container-fluid">
+
+<div class="row d-flex flex-column flex-md-row ">
+
+  <div class="col-md d-flex  flex-column  justify-content-start">
+    <div class="col-md fs-3 ">ADAM 1.8.1.7</div>
+    <div class=" fs-5  my-3"> The version that your company is currently using. If you need you could download it
+      there. To see your server data press the server button in the right cornet.</div>
+    <div class=" fs-3  my-3 text-success">Under maintenance: 10/01/23</div>
+    <div class=" my-2"><button class="login ">START LOADING</button></div>
+  </div>
+
+  <div class="col-md d-flex  flex-column justify-content-end">
+    <div class="col-md fs-3 ">ADAM 2.0.1.4</div>
+    <div class=" fs-5  my-3 pb-5"> The latest version of the application contains new features and improvements of
+      the previous version</div>
+    <div class="col-md fs-5 "></div>
+    <div class="my-2"><button class="request">Request</button></div>
+  </div>
+</div>
+
+<div class="row d-flex flex-column flex-md-row">
+
+  <div class="col-md d-flex  flex-column  justify-content-start">
+    <div class="col-md fs-3 ">Polyga FLEXSCAN 1.13.67</div>
+    <div class=" fs-5  my-3"> The version that your company is currently using.</div>
+    <div class=" fs-3  my-3 text-danger">Maintenance expired: 10/01/2021</div>
+    <div class=" my-2 "><button class="login ">START LOADING</button> <button class="request  ">Request
+        maintenance</button> </div>
+  </div>
+
+  <div class="col-md d-flex  flex-column justify-content-end">
+    <div class="col-md fs-3 ">Polyga FLEXSCAN 1.62.7</div>
+    <div class=" fs-5  my-3 pb-5"> The latest version of the application contains new features and improvements of
+      the previous version</div>
+    <div class="col-md fs-5 "></div>
+    <div class="my-4"><button class="request">Request</button></div>
+  </div>
+</div>
+
+</div>
      `}
-
-
-
 
 
   const Bar = {
