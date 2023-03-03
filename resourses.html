@@ -14,6 +14,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <title>Resourses</title>
+
+  <style>
+    .region {
+      background-color: #999;
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .active {
+      background-color: rgb(43, 81, 91);
+      color: rgb(255, 255, 255);
+      border-radius: 15px;
+    }
+
+    .active2 {
+      background-color: rgb(43, 81, 91);
+      color: rgb(255, 255, 255);
+      border-radius: 15px;
+    }
+
+    .active3 {
+      background-color: rgb(43, 81, 91);
+      color: rgb(255, 255, 255);
+      border-radius: 15px;
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -31,17 +61,30 @@
 
 
   <div id="app2">
-    <div class="px-5 py-3">
+    <div class="px-5 py-3 d-flex flex-column text-center flex-md-row">
 
-      <router-link class="fs-1 px-2" to="/foo">  Softwere</router-link>
-      <router-link class="fs-1 px-2" to="/bar">Documents</router-link>
-      <router-link class=" fs-1 px-2" to="/tor">Shared files</router-link>
+      <router-link class="fs-1 px-2" to="/foo">
+        <button v-bind:class="{active: isActive}" v-on:click="isActive=!isActive , isActive2=false, isActive3=false  "> Softwere
+        </button>
+      </router-link>
+
+      <router-link class="fs-1 px-2" to="/bar">
+        <button v-bind:class="{active2: isActive2}"
+          v-on:click="isActive2=!isActive2, isActive=false,  isActive3=false  ">Documents</button>
+      </router-link>
+
+
+      <router-link class=" fs-1 px-2" to="/tor">
+        <button v-bind:class="{active3:isActive3}"
+        v-on:click="isActive3=!isActive3, isActive2=false, isActive=false ">Shared filters</button>
+
+     
     </div>
-
 
 
     <!-- отображаем тут компонент, для которого совпадает маршрут -->
     <router-view></router-view>
+
   </div>
 
   <!-- <div id="app">
@@ -124,7 +167,13 @@
   // Убедитесь, что передали экземпляр маршрутизатора в опции
   // `router`, чтобы позволить приложению знать о его наличии.
   const app = new Vue({
-    router
+    data: {
+      isActive: false,
+      isActive2: false,
+      isActive3: false
+    },
+    router,
+
   }).$mount('#app2')
 
   // Всё, приложение работает! ;)

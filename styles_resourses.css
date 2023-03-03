@@ -108,6 +108,11 @@ label {
     background-color: rgb(227, 219, 219);
 }
 
+.routers:active{
+    background-color:rgb(43, 81, 91);
+    border-radius: 0.45em;
+}
+
 
 
 @media (max-width: 1024px) {
