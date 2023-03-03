@@ -45,7 +45,7 @@ Vue.component('header_lower', {
         <div class="fs-5 mt-2"> Tesla Croup Gmbh-Germany</div>
       </div>
       <div class="col-sm-6 d-flex flex-row-reverse justify-content-around">
-        <a href="#" class="block_size my-4 p-2">
+        <a href="resourses.html" class="block_size my-4 p-2">
           <div>
             <p class="block_up text-center">Resourses</p>
             <p class="block_down"> You can consult and download documents shared with you </p>
@@ -194,8 +194,6 @@ Vue.component('resourses', {
           </div>
       </div>
   </div>
-
- 
 </div>
  `
 })

@@ -78,50 +78,7 @@
     <!-- отображаем тут компонент, для которого совпадает маршрут -->
     <router-view></router-view>
   </div>
-  <!-- <div class="container-fluid">
-
-    <div class="row d-flex flex-column flex-md-row ">
-
-      <div class="col-md d-flex  flex-column  ">
-        <div class="col-md fs-3 ">ADAM 1.8.1.7</div>
-        <div class=" fs-5  my-3"> The version that your company is currently using. If you need you could download it
-          there. To see your server data press the server button in the right cornet.</div>
-        <div class=" fs-3  my-3 text-success">Under maintenance: 10/01/23</div>
-        <div class=" my-2"><button class="login ">START LOADING</button></div>
-      </div>
-
-      <div class="col-md d-flex  flex-column ">
-        <div class="col-md fs-3 ">ADAM 2.0.1.4</div>
-        <div class=" fs-5  my-3 pb-5"> The latest version of the application contains new features and improvements of
-          the previous version</div>
-        <div class="col-md fs-5 "></div>
-        <div class="my-2"><button class="request">Request</button></div>
-      </div>
-    </div>
-
-    
-
-    <div class="row d-flex flex-column flex-md-row">
-
-      <div class="col-md d-flex  flex-column  ">
-        <div class="col-md fs-3 ">Polyga FLEXSCAN 1.13.67</div>
-       <div class=" fs-5  my-3"> The version that your company is currently using</div>
-        <div class=" fs-3  my-3 text-danger">Maintenance expired: 10/01/2021</div>
-        <div class=" my-2 "><button class="login ">START LOADING</button> <button class="request  ">Request
-            maintenance</button> </div>
-      </div>
-
-      <div class="col-md d-flex  flex-column ">
-        <div class="col-md fs-3 ">Polyga FLEXSCAN 1.62.7</div>
-        <div class=" fs-5  my-3 pb-5"> The latest version of the application contains new features and improvements of
-          the previous version</div>
-        <div class="col-md fs-5 "></div>
-        <div class="my-4"><button class="request">Request</button></div>
-      </div>
-    </div>
-
-  </div> -->
-
+  
 
 
 
@@ -180,20 +137,145 @@
 
   const Bar = {
     template: `
-    <div class="d-flex mt-3  flex-column flex-md-row text ">
-        <div class="col-md px-5">
-            Status
-        </div>
-        <div class="col-md  px-5">
-            Creation date
-        </div>
-        
-        <div class="col-md  px-5">
-            Reference person
+  <div class="row">
+    <div class="d-flex px-5 mt-4">
+        <div class="col-10  ticketlist ">Document list</div>
+        <div class="col-2  text-end"> <button class=" " v-on:click="visible=!visible"  >Show filters<></button> </div>
+    </div>
+
+
+    <table class="table">
+    <thead class="text-center">
+        <tr class="px-3">    
+        <th scope="col"> Name</th>
+        <th scope="col"> Data</th>
+        <th scope="col"> Key Person</th>
+        <th scope="col"> Total</th>
+        <th scope="col"> Taxable</th>
+      </tr>
+    </thead>
+
+    <tbody class="text-center">
+      <tr class="text-center">
+      <th scope="col"> 1</th>
+      <th scope="col"> 2</th>
+      <th scope="col"> 3 </th>
+      <th scope="col"> 4 </th>
+      <th scope="col"> 5 </th>
+      </tr>
+    </tbody>
+    <tbody class="text-center">
+    <tr class="text-center">
+    <th scope="col"> 1</th>
+    <th scope="col"> 2</th>
+    <th scope="col"> 3 </th>
+    <th scope="col"> 4 </th>
+    <th scope="col"> 5 </th>
+    </tr>
+  </tbody>
+  </table>
+
+
+
+    <div v-if=visible class="container-fluid filters  ">
+    <div class="row ">
+
+        <div class="col-md-2 mt-3 text-center fs-3">Filters</div>
+        <div class="col-md-10  d-flex justify-content-center">
+
+            <div class=" d-flex flex-column flex-md-row ">
+                <div  class=" px-3 py-3 bg-light-subtle  my-md-3">
+                    
+                    <div> Тип</div>
+                    <select class=" fs-6 filters " name="" id="">
+                        <option value="">Куплено (ВТ)</option>
+                        <option value="">Продано (ВТ)</option>
+                        <option value="">Статус (ВТ)</option>
+                    </select>
+
+                </div>
+                <div class="px-3 py-3  bg-light-subtle my-md-3">
+                    <div> Диапазон дат</div>
+                    <input class=" filters" type="date" id="start" name="trip-start" value="2018-01-01"  min="2018-01-01"
+                        max="2022-12-31">
+                </div>
+
+            </div>
         </div>
     </div>
-     ` }
-  const Tor = { template: '<div>привет снова2</div>' }
+</div>
+   
+</div>
+</div>`, }
+
+
+  const Tor = {  template: `
+  <div class="row">
+    <div class="d-flex px-5 mt-4">
+        <div class="col-10  ticketlist ">Shared file list</div>
+        <div class="col-2  text-end"> <button class=" " v-on:click="visible=!visible"  >Show filters<></button> </div>
+    </div>
+
+
+    <table class="table">
+    <thead class="text-center">
+        <tr class="px-3">    
+        <th scope="col"> Name</th>
+        <th scope="col"> Extention</th>
+        <th scope="col"> Data</th>
+        <th scope="col"> Key Person</th>
+    
+      </tr>
+    </thead>
+
+    <tbody class="text-center">
+      <tr class="text-center">
+      <th scope="col"> 1</th>
+      <th scope="col"> 2</th>
+      <th scope="col"> 3 </th>
+      <th scope="col"> 4 </th>
+    
+      </tr>
+    </tbody>
+    <tbody class="text-center">
+    <tr class="text-center">
+    <th scope="col"> 1</th>
+    <th scope="col"> 2</th>
+    <th scope="col"> 3 </th>
+    <th scope="col"> 4 </th>
+ 
+    </tr>
+  </tbody>
+
+
+
+  </table>
+    <div v-if=visible class="container-fluid filters  ">
+    <div class="row ">
+        <div class="col-md-2 mt-3 text-center fs-3">Filters</div>
+        <div class="col-md-10  d-flex justify-content-center">
+            <div class=" d-flex flex-column flex-md-row ">
+                <div  class=" px-3 py-3 bg-light-subtle  my-md-3">
+                    <div> Тип</div>
+                    <select class=" fs-6 filters " name="" id="">
+                        <option value="">Куплено (ВТ)</option>
+                        <option value="">Продано (ВТ)</option>
+                        <option value="">Статус (ВТ)</option>
+                    </select>
+                </div>
+                <div class="px-3 py-3  bg-light-subtle my-md-3">
+                    <div> Диапазон дат</div>
+                    <input class=" filters" type="date" id="start" name="trip-start" value="2018-01-01"  min="2018-01-01"
+                        max="2022-12-31">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+   
+</div>
+</div>`, }
 
   // 2. Определяем несколько маршрутов
   // Каждый маршрут должен указывать на компонент.
