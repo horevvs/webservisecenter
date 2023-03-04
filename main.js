@@ -24,7 +24,7 @@ Vue.component('mainheader', {
       <div v-if=visible class="container-fluid">
       <div class="row z-3 position-absolute px-4 mt-3">
           <div class=" bg-warning text-center">
-              Filters header will be threre
+              Filters header will be threre0
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@ Vue.component('ticket', {
         <div class=" ticket mt-3">Ticket overview </div>
         <img class=" ticket mt-3 px-3" src="images/circle.png" alt="image not found">
       </div>
-      <div class="col-12 col-md-10    ">
+      <div class="col-12 col-md-10">
         <div class="d-flex justify-content-center justify-content-md-start">
           <div> <img class="mt-4" src="images/Vector2.svg" alt="no image" alt=""> </div>
           <div class=" total mt-4  ps-3 "> <span> 2022 Total request</span>
@@ -80,21 +80,27 @@ Vue.component('ticket', {
           </div>
         </div>
         <hr class="w-100">
-        <div class="d-flex ticket justify-content-center justify-content-md-start">
-          <div>   <input type="checkbox" class="form-check-input" id="exampleCheck1"> <span>In work</span>
-            <div class="px-3">{{inwork}}</div>
-          </div>
-          <div class="px-4 ">
-          <input type="checkbox" class="form-check-input" id="exampleCheck2"> 
+
+        <div class="d-flex px-md-1 px-5  ticket flex-column flex-md-row    ">
+     
+        <div> <input type="checkbox" class="form-check-input" id="exampleCheck1"> 
+          <span>In work</span>
+          <div >{{inwork}}</div>
+        </div>
+  
+        <div class='px-md-2' >
+          <input type="checkbox" class="form-check-input" id="exampleCheck2">
           <span>Waiting for your answer</span>
-            <div class="px-3">{{ waitingfor}}</div>
-          </div>
+          <div >{{waitingfor}}</div>
         </div>
-        <div class="d-flex ticket justify-content-center justify-content-md-start">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck3">
-          <div class='px-2 '> Solved</div>
-        </div>
+  
       </div>
+  
+      <div class="d-flex ticket px-md-1 px-5  ">
+        <input type="checkbox" class="form-check-input " id="exampleCheck3">
+        <div> Solved</div>
+      </div>
+
     </div>
      `
 })
