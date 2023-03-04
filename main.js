@@ -16,7 +16,7 @@ Vue.component('mainheader', {
               <div class="text_header_data"> Sunday 25 September</div>
           </div>
       </div>
-      <div class="col-2 pt-2 d-flex justify-content-end  px-2">
+      <div class="col-2 pt-2 d-flex justify-content-end  px-4">
           <button v-on:click="visible=!visible" > <a href="#"> <img v-bind:src="images" alt="Пример"> </a> </button>
       </div>
 
@@ -47,7 +47,7 @@ Vue.component('header_lower', {
       <div class="col-sm-6 d-flex flex-row-reverse justify-content-around">
         <a href="resourses.html" class="block_size my-4 p-2">
           <div>
-            <p class="block_up text-center">Resourses</p>
+            <p class="block_up ">Resourses</p>
             <p class="block_down"> You can consult and download documents shared with you </p>
           </div>
         </a>
@@ -79,7 +79,7 @@ Vue.component('ticket', {
             <p> {{request}}</p>
           </div>
         </div>
-        <hr class="w-100">
+        <hr class="w-50">
 
         <div class="d-flex px-md-1 px-5  ticket flex-column flex-md-row    ">
      
