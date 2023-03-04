@@ -14,36 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <title>Resourses</title>
-
-  <style>
-    .region {
-      background-color: #999;
-      width: 100px;
-      height: 100px;
-      display: inline-block;
-      margin: 10px;
-    }
-
-    .active {
-      background-color: rgb(43, 81, 91);
-      color: rgb(255, 255, 255);
-      border-radius: 15px;
-    }
-
-    .active2 {
-      background-color: rgb(43, 81, 91);
-      color: rgb(255, 255, 255);
-      border-radius: 15px;
-    }
-
-    .active3 {
-      background-color: rgb(43, 81, 91);
-      color: rgb(255, 255, 255);
-      border-radius: 15px;
-    }
-  </style>
-
-
 </head>
 
 <body>
@@ -56,10 +26,18 @@
     <resourses icon='images/logo_resourses.svg'> </resourses>
   </div>
 
-
-
   <div id="app2">
-    <div class="px-5 py-3 d-flex flex-column text-center flex-md-row">
+    <routerspath></routerspath>
+    <router-view></router-view>
+  </div>
+</body>
+
+<script>
+
+  Vue.component('routerspath', {
+    props: ['images'],
+       template: `
+  <div class="px-5 py-3 d-flex flex-column text-center flex-md-row">
       <router-link class="fs-2 px-2  font-weight-bold" to="/foo">
         <button v-bind:class="{active: isActive}" class=" font-weight-bold"
           v-on:click="isActive=!isActive , isActive2=false, isActive3=false  "> Softwere
@@ -73,18 +51,10 @@
         <button v-bind:class="{active3:isActive3}"
           v-on:click="isActive3=!isActive3, isActive2=false, isActive=false ">Shared filters</button>
     </div>
-
-
-
-    <!-- отображаем тут компонент, для которого совпадает маршрут -->
-    <router-view></router-view>
-  </div>
-</body>
-
-<script>
+   `
+  })
 
   const Foo = {
-    
     template: `
     <div class="container-fluid">
 
@@ -126,23 +96,21 @@
   </div>
 </div>
 
-</div>
-     `}
-
+</div> `}
 
   const Bar = {
     data: function () {
-    return {
-      visible: false
-    }
-  },
+      return {
+        visible: false
+      }
+    },
     template: `
   <div class="row">
+
     <div class="d-flex px-5 mt-4">
         <div class="col-10  ticketlist ">Document list</div>
         <div class="col-2  text-end"> <button class=" " v-on:click="visible=!visible"  >Show filters<></button> </div>
     </div>
-
 
     <table class="table">
     <thead class="text-center">
@@ -164,6 +132,7 @@
       <th scope="col"> 5 </th>
       </tr>
     </tbody>
+
     <tbody class="text-center">
     <tr class="text-center">
     <th scope="col"> 1</th>
@@ -174,8 +143,6 @@
     </tr>
   </tbody>
   </table>
-
-
 
     <div v-if=visible class="container-fluid filters  ">
     <div class="row ">
@@ -207,20 +174,16 @@
 </div>`,
   }
 
-
   const Tor = {
     data: function () {
-    return {
-      visible: false
-    }
-  },
+      return { visible: false }
+    },
     template: `
   <div class="row">
     <div class="d-flex px-5 mt-4">
         <div class="col-10  ticketlist ">Shared file list</div>
-        <div class="col-2  text-end"> <button class=" " v-on:click="visible=!visible"  >Show filters<></button> </div>
+        <div class="col-2  text-end"> <button v-on:click="visible=!visible">Show filters<></button> </div>
     </div>
-
 
     <table class="table">
     <thead class="text-center">
@@ -269,7 +232,6 @@
                     <input class=" filters" type="date" id="start" name="trip-start" value="2018-01-01"  min="2018-01-01"
                         max="2022-12-31">
                 </div>
-
             </div>
         </div>
     </div>
@@ -279,27 +241,18 @@
 </div>`,
   }
 
-  // 2. Определяем несколько маршрутов
-  // Каждый маршрут должен указывать на компонент.
-  // "Компонентом" может быть как конструктор компонента, созданный
-  // через `Vue.extend()`, так и просто объект с опциями компонента.
-  // Мы поговорим о вложенных маршрутах позднее.
   const routes = [
     { path: '/foo', component: Foo },
     { path: '/bar', component: Bar },
     { path: '/tor', component: Tor }
   ]
 
-  // 3. Создаём экземпляр маршрутизатора и передаём маршруты в опции `routes`
-  // Вы можете передавать и дополнительные опции, но пока не будем усложнять.
   const router = new VueRouter({
-    routes // сокращённая запись для `routes: routes`
+    routes
   })
 
-  // 4. Создаём и монтируем корневой экземпляр приложения.
-  // Убедитесь, что передали экземпляр маршрутизатора в опции
-  // `router`, чтобы позволить приложению знать о его наличии.
-  const app = new Vue({
+  new Vue({
+    el: "#app2",
     data: {
       isActive: false,
       isActive2: false,
@@ -307,26 +260,11 @@
       visible: false
     },
     router,
-
-  }).$mount('#app2')
-
-  // Всё, приложение работает! ;)
-
-
-
+  })
 
 </script>
 
-
-
-
-
-
-
-
-
 <script src="https://unpkg.com/vue@2.7.14/dist/vue.js"></script>
 <script src="main.js"></script>
-
 
 </html>

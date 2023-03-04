@@ -164,6 +164,33 @@ label {
 }
 
 
+.region {
+    background-color: #999;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .active {
+    background-color: rgb(43, 81, 91);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+  }
+
+  .active2 {
+    background-color: rgb(43, 81, 91);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+  }
+
+  .active3 {
+    background-color: rgb(43, 81, 91);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+  }
+
+
 
 @media (max-width: 1024px) {
     .text_header {
