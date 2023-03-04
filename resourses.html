@@ -51,7 +51,6 @@
   <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
   <script src="https://unpkg.com/vue-router@3/dist/vue-router.js"></script>
 
-
   <div id="app">
     <mainheader images='images/Vector.png'></mainheader>
     <resourses icon='images/logo_resourses.svg'> </resourses>
@@ -75,21 +74,17 @@
           v-on:click="isActive3=!isActive3, isActive2=false, isActive=false ">Shared filters</button>
     </div>
 
+
+
     <!-- отображаем тут компонент, для которого совпадает маршрут -->
     <router-view></router-view>
   </div>
-  
-
-
-
-
-
-
 </body>
 
 <script>
 
   const Foo = {
+    
     template: `
     <div class="container-fluid">
 
@@ -136,6 +131,11 @@
 
 
   const Bar = {
+    data: function () {
+    return {
+      visible: false
+    }
+  },
     template: `
   <div class="row">
     <div class="d-flex px-5 mt-4">
@@ -199,17 +199,22 @@
                     <input class=" filters" type="date" id="start" name="trip-start" value="2018-01-01"  min="2018-01-01"
                         max="2022-12-31">
                 </div>
-
             </div>
         </div>
     </div>
 </div>
-   
 </div>
-</div>`, }
+</div>`,
+  }
 
 
-  const Tor = {  template: `
+  const Tor = {
+    data: function () {
+    return {
+      visible: false
+    }
+  },
+    template: `
   <div class="row">
     <div class="d-flex px-5 mt-4">
         <div class="col-10  ticketlist ">Shared file list</div>
@@ -224,7 +229,6 @@
         <th scope="col"> Extention</th>
         <th scope="col"> Data</th>
         <th scope="col"> Key Person</th>
-    
       </tr>
     </thead>
 
@@ -246,9 +250,6 @@
  
     </tr>
   </tbody>
-
-
-
   </table>
     <div v-if=visible class="container-fluid filters  ">
     <div class="row ">
@@ -275,7 +276,8 @@
 </div>
    
 </div>
-</div>`, }
+</div>`,
+  }
 
   // 2. Определяем несколько маршрутов
   // Каждый маршрут должен указывать на компонент.
@@ -301,7 +303,8 @@
     data: {
       isActive: false,
       isActive2: false,
-      isActive3: false
+      isActive3: false,
+      visible: false
     },
     router,
 
