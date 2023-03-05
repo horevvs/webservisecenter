@@ -36,7 +36,7 @@
 
   Vue.component('routerspath', {
     props: ['images'],
-       template: `
+    template: `
   <div class="px-5 py-3 d-flex flex-column text-center flex-md-row">
       <router-link class="fs-2 px-2  font-weight-bold" to="/foo">
         <button v-bind:class="{active: isActive}" class=" font-weight-bold"
@@ -105,15 +105,17 @@
       }
     },
     template: `
-  <div class="row">
+  <div class="container-fluid">
 
     <div class="d-flex px-5 mt-4">
         <div class="col-10  ticketlist ">Document list</div>
         <div class="col-2  text-end"> <button class=" " v-on:click="visible=!visible"  >Show filters<></button> </div>
     </div>
 
+    <div class="table-responsive">
     <table class="table">
-    <thead class="text-center">
+
+      <thead class="text-center">
         <tr class="px-3">    
         <th scope="col"> Name</th>
         <th scope="col"> Data</th>
@@ -123,26 +125,31 @@
       </tr>
     </thead>
 
-    <tbody class="text-center">
-      <tr class="text-center">
-      <th scope="col"> 1</th>
-      <th scope="col"> 2</th>
-      <th scope="col"> 3 </th>
-      <th scope="col"> 4 </th>
-      <th scope="col"> 5 </th>
-      </tr>
-    </tbody>
+      
+        <tbody class="text-center">
+            <tr class="text-center ticketlist">
+                <th scope="col"> ОС-23</th>
+                <th scope="col"> 12/07/22</th>
+                <th scope="col"> Marco Rossini </th>
+                <th scope="col"> €9.000.00 </th>
+                <th scope="col"> €11.800.00 </th>
+            </tr>
+        </tbody>
 
-    <tbody class="text-center">
-    <tr class="text-center">
-    <th scope="col"> 1</th>
-    <th scope="col"> 2</th>
-    <th scope="col"> 3 </th>
-    <th scope="col"> 4 </th>
-    <th scope="col"> 5 </th>
-    </tr>
-  </tbody>
-  </table>
+        <tbody class="text-center">
+          <tr class="text-center ticketlist">
+            <th scope="col"> ОС-58</th>
+                <th scope="col"> 23/09/22</th>
+                <th scope="col"> Marco Rossini </th>
+                <th scope="col"> €300.00 </th>
+                <th scope="col"> €360.00 </th>
+            </tr>
+        </tbody>
+       
+    </table>
+</div>
+
+  
 
     <div v-if=visible class="container-fluid filters  ">
     <div class="row ">
@@ -185,9 +192,9 @@
         <div class="col-2  text-end"> <button v-on:click="visible=!visible">Show filters<></button> </div>
     </div>
 
-    <table class="table">
-    <thead class="text-center">
-        <tr class="px-3">    
+    <table class="table table-responsive">
+    <thead class="text-center  ">
+        <tr class="px-3 ">    
         <th scope="col"> Name</th>
         <th scope="col"> Extention</th>
         <th scope="col"> Data</th>
@@ -195,21 +202,22 @@
       </tr>
     </thead>
 
-    <tbody class="text-center">
+    <tbody class="text-center  ticketlist">
       <tr class="text-center">
-      <th scope="col"> 1</th>
-      <th scope="col"> 2</th>
-      <th scope="col"> 3 </th>
-      <th scope="col"> 4 </th>
+      <th scope="col"> Video</th>
+      <th scope="col"> Avi</th>
+      <th scope="col"> 12/07/22 </th>
+      <th scope="col"> Marco Rossini </th>
     
       </tr>
     </tbody>
-    <tbody class="text-center">
+</body>
+    <tbody class="text-center ticketlist  ">
     <tr class="text-center">
-    <th scope="col"> 1</th>
-    <th scope="col"> 2</th>
-    <th scope="col"> 3 </th>
-    <th scope="col"> 4 </th>
+      <th scope="col"> Scanner3D</th>
+      <th scope="col"> PNG</th>
+      <th scope="col"> 12/07/22 </th>
+      <th scope="col"> Marco Rossini </th>
  
     </tr>
   </tbody>

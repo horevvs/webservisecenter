@@ -112,6 +112,10 @@ label {
     background-color: aqua;
 }
 
+.lay{
+    overflow-x: scroll;
+  }
+
 
 @media (max-width: 1024px) {
     .text_header {
@@ -136,6 +140,11 @@ label {
         font-size: 20px;
         color: rgb(77, 77, 77);
     }
+
+    table{
+        font-size:12px;
+    }
+
 }
 
 @media (max-width: 375px) {
@@ -144,6 +153,7 @@ label {
         font-size: 15px;
         color: rgb(77, 77, 77);
     }
+
 
     .total {
         font-family: 'Comfortaa', cursive;

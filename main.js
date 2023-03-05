@@ -75,23 +75,23 @@ Vue.component('ticket', {
       <div class="col-12 col-md-10">
         <div class="d-flex justify-content-center justify-content-md-start">
           <div> <img class="mt-4" src="images/Vector2.svg" alt="no image" alt=""> </div>
-          <div class=" total mt-4  ps-3 "> <span> 2022 Total request</span>
+          <div class= "total mt-4 ps-3"> <span> 2022 Total request</span>
             <p> {{request}}</p>
           </div>
         </div>
         <hr class="w-50">
 
-        <div class="d-flex px-md-1 px-5  ticket flex-column flex-md-row    ">
+        <div class="d-flex px-md-1 px-5  ticket flex-column flex-md-row">
      
         <div> <input type="checkbox" class="form-check-input" id="exampleCheck1"> 
           <span>In work</span>
-          <div >{{inwork}}</div>
+          <div>{{inwork}}</div>
         </div>
   
         <div class='px-md-2' >
           <input type="checkbox" class="form-check-input" id="exampleCheck2">
           <span>Waiting for your answer</span>
-          <div >{{waitingfor}}</div>
+          <div>{{waitingfor}}</div>
         </div>
   
       </div>
@@ -206,9 +206,6 @@ Vue.component('resourses', {
 
 
 
-
-
-
 Vue.component('ticketlist', {
   props: ['images'],
   data: function () {
@@ -225,40 +222,40 @@ Vue.component('ticketlist', {
         <div class="col-2  text-end"> <button class=" " v-on:click="visible=!visible"  >Show filters<></button> </div>
     </div>
 
+    <div class="table-responsive">
+    <table class="table ">
 
-    <table class="table">
-    <thead class="text-center">
-        <tr class="px-3">    
-        <th scope="col"> Status</th>
-        <th scope="col"> Creation date</th>
-        <th scope="col"> Last up-grade</th>
-        <th scope="col"> Ticket title</th>
-        <th scope="col">  Reference person</th>
-      </tr>
-    </thead>
+        <thead class="text-center">
+            <tr class="px-3">
+                <th scope="col"> Status</th>
+                <th scope="col"> Creation date</th>
+                <th scope="col"> Last up-grade</th>
+                <th scope="col"> Ticket title</th>
+                <th scope="col"> Reference person</th>
+            </tr>
+        </thead>
 
-    <tbody class="text-center">
-      <tr class="text-center">
-      <th scope="col"> 1</th>
-      <th scope="col"> 2</th>
-      <th scope="col"> 3 </th>
-      <th scope="col"> 4 </th>
-      <th scope="col"> 5 </th>
-      </tr>
-    </tbody>
-    <tbody class="text-center">
-    <tr class="text-center">
-    <th scope="col"> 1</th>
-    <th scope="col"> 2</th>
-    <th scope="col"> 3 </th>
-    <th scope="col"> 4 </th>
-    <th scope="col"> 5 </th>
-    </tr>
-  </tbody>
-
-
-
-  </table>
+        <tbody class="text-center">
+            <tr class="text-center">
+                <th scope="col"> Answered</th>
+                <th scope="col"> 12/07/22</th>
+                <th scope="col"> 14/09/22 </th>
+                <th scope="col"> Crash in sales manager </th>
+                <th scope="col"> Anna Gregoretti</th>
+            </tr>
+        </tbody>
+        <tbody class="text-center">
+            <tr class="text-center">
+            <th scope="col"> Open</th>
+            <th scope="col"> 20/09/22</th>
+            <th scope="col"> 20/09/22 </th>
+            <th scope="col"> Warehouse map error </th>
+            <th scope="col"> Valerio comaz</th>
+            </tr>
+        </tbody>
+       
+    </table>
+</div>
 
 
 
