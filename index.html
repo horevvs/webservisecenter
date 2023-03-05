@@ -11,12 +11,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
 
     <title>Document</title>
+ <style>
 
+.password {
+		position: relative;
+}
+
+.password-control {
+	position: absolute;
+	top: 35px;
+	right: 15px;
+	display: inline-block;
+	width: 20px;
+	height: 30px;
+	background: url(images/eye-fill.svg) 0 0 no-repeat;
+}
+.password-control.view {
+	background: url(images/eye-slash.svg) 0 0 no-repeat;
+}
+
+
+
+
+ </style>
 </head>
 
 <body>
     <div class="container">
-
+        
         <div class="logo">
             <img src="images/logo.png" alt="sadad">
             <div> <strong>Company</strong> Logo</div>
@@ -26,10 +48,22 @@
             <div class="containerTextlower">Please sign-in to your account and start the Adventure</div>
         </div>
 
+        
+
         <div>
             <input class="text-field__input" type="text" placeholder="Email">
-            <input class="text-field__input" type="text" placeholder="Password">
+            <!-- <input class="text-field__input" type="text" placeholder="Password"> -->
         </div>
+
+        <div class="password ">
+            <input type="password"class='text-field__input'   id="password-input" placeholder="Password" name="password" >
+            <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+        </div>
+
+   
+
+
+
 
         <div class="wscfooter">
             <div class="wscfooterleft">
@@ -45,4 +79,19 @@
 <script src="https://unpkg.com/vue@next"></script>
 <script src="/main.js"></script>
 
+<script>
+
+function show_hide_password(target){
+	let input = document.getElementById('password-input');
+	if (input.getAttribute('type') == 'password') {
+		target.classList.add('view');
+		input.setAttribute('type', 'text');
+	} else {
+		target.classList.remove('view');
+		input.setAttribute('type', 'password');
+	}
+	return false;
+}
+    
+</script>
 </html>
