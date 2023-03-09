@@ -17,10 +17,11 @@ Vue.component('mainheader', {
           </div>
       </div>
       <div class="col-2 pt-2 d-flex justify-content-end  px-4">
-          <button v-on:click="visible=!visible" > <a href="#"> <img v-bind:src="images" alt="Пример"> </a> </button>
+          <button v-on:click="visible=!visible"> <a href="#"> <img v-bind:src="images" alt="Пример"> </a> </button>
       </div>
 
-      <!-- в данной  верстке обображаеться фильтр которые открываеться при нажатии на кнопку-->
+      <!-- в данной  верстке обображаеться фильтр который открываеться при нажатии на кнопку-->
+
       <div v-if=visible class="container-fluid">
       <div class="row z-3 position-absolute px-4 mt-3">
           <div class=" bg-warning text-center">
@@ -40,14 +41,14 @@ Vue.component('header_lower', {
       <div class="col-6 col-sm-3 p-5">
       <img v-bind:src="icon" alt="image not found">
       </div>
-      <div class="col-6 col-sm-3 pt-5 d-flex  flex-column   ">
+      <div class="col-6 col-sm-3 pt-5 d-flex  flex-column">
         <div class="fs-5"> Anna Gregoretti</div>
         <div class="fs-5 mt-2"> Tesla Croup Gmbh-Germany</div>
       </div>
       <div class="col-sm-6 d-flex flex-row-reverse justify-content-around">
-        <a href="resourses.html" class="block_size my-4 p-2">
+        <a href="resourses.html#/foo" class="block_size my-4 p-2">
           <div>
-            <p class="block_up ">Resourses</p>
+            <p class="block_up"> Resourses </p>
             <p class="block_down"> You can consult and download documents shared with you </p>
           </div>
         </a>
@@ -68,10 +69,12 @@ Vue.component('ticket', {
   props: ['request', 'waitingfor', 'inwork'],
   template: `
       <div class="row justify-content-center">
+
       <div class="col-6 col-md-2 d-flex flex-column  text-center">
         <div class=" ticket mt-3">Ticket overview </div>
         <img class=" ticket mt-3 px-3" src="images/circle.png" alt="image not found">
       </div>
+
       <div class="col-12 col-md-10">
         <div class="d-flex justify-content-center justify-content-md-start">
           <div> <img class="mt-4" src="images/Vector2.svg" alt="no image" alt=""> </div>
@@ -93,12 +96,12 @@ Vue.component('ticket', {
           <span>Waiting for your answer</span>
           <div>{{waitingfor}}</div>
         </div>
-  
+
       </div>
   
       <div class="d-flex ticket px-md-1 px-5  ">
-        <input type="checkbox" class="form-check-input " id="exampleCheck3">
-        <div> Solved</div>
+        <input type="checkbox" class="form-check-input  " id="exampleCheck3">
+        <div class="px-1 "> Solved</div>
       </div>
 
     </div>
@@ -120,7 +123,7 @@ Vue.component('support', {
 
           </div>
           <div class="col-sm-6 d-flex flex-row-reverse justify-content-around">
-              <a href="resourses.html" class="block_size my-4 p-2">
+              <a href="resourses.html#/foo" class="block_size my-4 p-2">
                   <div>
                       <p class="block_up ">Resourses</p>
                       <p class="block_down"> You can consult and download documents shared with you </p>
@@ -178,11 +181,10 @@ Vue.component('resourses', {
   <div class="fluid">
       <div class="row ">
           <div class="col-6 col-sm-3 p-5">
-              <img v-bind:src="icon" alt="image not found">
+              <img v-bind:src="icon"   alt="image not found">
           </div>
           <div class="col-6 col-sm-3 pt-5 d-flex  flex-column   ">
               <div class="fs-3"> Resourses</div>
-
           </div>
           <div class="col-sm-6 d-flex flex-row-reverse justify-content-around">
               <a href="support.html" class="block_size my-4 p-2">
@@ -205,7 +207,6 @@ Vue.component('resourses', {
 })
 
 
-
 Vue.component('ticketlist', {
   props: ['images'],
   data: function () {
@@ -214,12 +215,11 @@ Vue.component('ticketlist', {
     }
   },
 
-
   template: `
   <div class="row">
     <div class="d-flex px-5 mt-4">
         <div class="col-10  ticketlist ">Ticket List</div>
-        <div class="col-2  text-end"> <button class=" " v-on:click="visible=!visible"  >Show filters<></button> </div>
+        <div class="col-2  text-end"> <button class=" " v-on:click="visible=!visible"> Show filters<> </button> </div>
     </div>
 
     <div class="table-responsive">
@@ -259,7 +259,7 @@ Vue.component('ticketlist', {
 
 
 
-    <div v-if=visible class="container-fluid filters  ">
+    <div v-if=visible class="container-fluid filters">
     <div class="row ">
 
         <div class="col-md-2 mt-3 text-center fs-3">Filters</div>
