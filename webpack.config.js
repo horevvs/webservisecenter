@@ -1,17 +1,16 @@
 
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+// const { ClearWebpackPlugin } = require('clean-webpack-plugin')
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-
-const webpack = require('webpack');
+// const webpack = require('webpack');
 
 module.exports = {
 
     devServer: {
-        contentBase: path.join(__dirname,'dist'),
-        port:3003
+        contentBase: path.join(__dirname, 'dist'),
+        port: 3003
     },
 
     entry: '/main.js',
@@ -24,10 +23,17 @@ module.exports = {
     },
 
     output: {
+        filename: 'main_bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main_bundle.js'
     },
 
+    // plugin: [
+    //     new HtmlWebpackPlugin({
+    //         template: "./Mainindex.html"
+    //     }), new ClearWebpackPlugin()
+    // ]
+
+    
 }
 
 
