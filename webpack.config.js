@@ -1,13 +1,14 @@
 
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { watch } = require('fs')
 
 // const { ClearWebpackPlugin } = require('clean-webpack-plugin')
 
 // const webpack = require('webpack');
 
 module.exports = {
-
+    watch: true,
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         port: 3003
@@ -26,6 +27,7 @@ module.exports = {
         filename: 'main_bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
+    
 
     // plugin: [
     //     new HtmlWebpackPlugin({
